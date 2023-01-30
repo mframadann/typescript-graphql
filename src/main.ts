@@ -1,3 +1,5 @@
-import express from "express";
-import { buildSchema } from "graphql";
-import { graphqlHTTP } from "express-graphql";
+import { App } from "./cores";
+
+App.app.listen(App.port, () => {
+  console.log(`[⚡server] running at http://localhost:${App.port}`);
+});
