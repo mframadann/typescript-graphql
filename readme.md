@@ -12,7 +12,7 @@ $ npm install
 $ npm run build
 $ npm start
 ```
-or: 
+or without building: 
 ```shell
 npm install
 npm run dev
@@ -31,8 +31,11 @@ mutation {
       password: "Password" 
     }
   ){
+    ##your selected fileds. example:
+    email_address
     profile{
-      //your selected fileds
+      first_name
+      last_name
     }
   }
 }
