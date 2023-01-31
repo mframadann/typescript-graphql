@@ -1,11 +1,12 @@
 export type UsersInputs = {
   userInputs: {
-    emailAddress: string;
-    password: string;
-    firstName: string;
-    lastName: string;
+    user_id?: number;
+    emailAddress?: string;
+    password?: string;
+    firstName?: string;
+    lastName?: string;
     phoneNumber?: string;
-    gender: string;
-    dateOfBirth: Date;
+    gender?: string;
+    dateOfBirth?: Date;
   };
 };

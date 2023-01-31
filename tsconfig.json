@@ -5,8 +5,9 @@
         "strict": true,
         "esModuleInterop": true,
         "emitDecoratorMetadata": true,
+        "outDir": "./dist",
     "experimentalDecorators": true,
         "lib": ["es2018", "esnext.asynciterable"]
     },
-    "exclude": ["node_modules"]
+    "exclude": ["node_modules", "./dist"]
 }

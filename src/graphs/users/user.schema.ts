@@ -19,10 +19,15 @@ export const UsersInputs = `
     gender: String!
     dateOfBirth: String!
   }
+
+  input UserInput {
+    user_id: ID!
+  }
 `;
 
 export const UsersMutations = `
   createUsers(userInputs: UsersInputs) : Users
+  findUserById(userInputs: UserInput): Users
 `;
 
 export const UsersQuery = `
