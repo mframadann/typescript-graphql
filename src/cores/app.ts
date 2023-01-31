@@ -13,8 +13,7 @@ class TypeGraphQlApplication {
     this.middlerwares();
     this.graphQL();
   }
-
-  private graphQL() {
+  private graphQL(): void {
     this.app.use(
       "/graphql",
       graphqlHTTP({
@@ -24,7 +23,6 @@ class TypeGraphQlApplication {
       })
     );
   }
-
   private middlerwares(): void {
     this.app.use(express.json());
     this.app.use(express.urlencoded({ extended: false }));
