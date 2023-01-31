@@ -12,3 +12,29 @@ $ npm install
 $ npm run build
 $ npm start
 ```
+or: 
+```shell
+npm install
+npm run dev
+```
+##Usage
+creating a new user and profile data
+```graphql
+mutation {
+  createUsers(
+    userInputs: {
+      firstName: "Jhon" //string
+      lastName: "Doe" //string
+      gender: "Male" //string
+      dateOfBirth: "2003-12-05" //date
+      emailAddress: "jhondoe@gmail.com" //string
+      password: "Password" //string
+    }
+  ){
+    profile{
+      first_name
+      last_name
+    }
+  }
+}
+```
