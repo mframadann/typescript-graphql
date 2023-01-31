@@ -94,7 +94,7 @@ query {
   }
 }
 ```
-server will give a response:
+server will give a responses:
 ```json
 {
   "data": {
@@ -127,6 +127,38 @@ server will give a response:
         }
       }
     ]
+  }
+}
+```
+
+### Get user by id with profile 
+```graphql
+mutation {
+  findUserById(
+    userInputs: { user_id : 3}
+  ){
+    ## select the fields you want. for example
+    email_address
+    profile {
+      first_name
+      last_name
+      last_updated
+    }
+  }
+}
+```
+server will give a response: 
+```json
+{
+  "data": {
+    "findUserById": {
+      "email_address": "shinamahiru@gmail.com",
+      "profile": {
+        "first_name": "Shina",
+        "last_name": "Mahiru",
+        "last_updated": "2023-01-31T03:27:53.217Z"
+      }
+    }
   }
 }
 ```
