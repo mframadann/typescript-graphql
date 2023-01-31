@@ -30,11 +30,11 @@ Open [http://localhost:yourport/graphql](http://localhost:yourport/graphql) in y
 mutation {
   createUsers(
     userInputs: {
-      firstName: "Jhon" 
-      lastName: "Doe" 
-      gender: "Male" 
+      firstName: "Shina" 
+      lastName: "Mahiru" 
+      gender: "Female" 
       dateOfBirth: "2003-12-05" 
-      emailAddress: "jhondoe@gmail.com" 
+      emailAddress: "shinamahiru@gmail.com" 
       password: "Password" 
     }
   ){
