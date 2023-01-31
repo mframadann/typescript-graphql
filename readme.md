@@ -41,7 +41,7 @@ mutation {
   }
 }
 ```
-Getting all users data:
+### Getting all users data:
 ```graphql
 query {
   ## your queries name. example: 
@@ -74,7 +74,7 @@ and server will be give a responses:
 }
 ```
 
-Getting all users data with profile: 
+### Getting all users data with profile: 
 ```graphql
 query {
   users {
