@@ -7,6 +7,10 @@
 Simple GraphQL implementation, built using [GraphQL](https://graphql.org), [Prisma ORM](https://prisma.io), [Typescript](https://www.typescriptlang.org/) And [ExpressJS](https://expressjs.com/).
 
 ## Instalations
+push prisma schema to database:
+```shell
+$ npx prisma db push
+```
 with building: 
 ```shell
 $ npm install
@@ -18,12 +22,8 @@ or without building:
 $ npm install
 $ npm run dev
 ```
-push prisma schema to database:
-```shell
-$ npx prisma db push
-```
 ## Usage
-Visit [http://localhost:yourport/graphql](http://localhost:yourport/graphql) and creating a new user and profile data
+Open [http://localhost:yourport/graphql](http://localhost:yourport/graphql) in your browser and creating a new user and profile data
 ```graphql
 mutation {
   createUsers(
