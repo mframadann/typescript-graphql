@@ -162,3 +162,62 @@ server will give a response:
   }
 }
 ```
+### Get profiles data with the user: 
+```graphql
+query {
+  ## your queries name. for example: 
+  profiles {
+    ## select the fields you want. for example
+    first_name
+    last_name
+    gender
+    last_updated
+    user {
+      email_address
+      created_at
+    }
+  }
+}
+```
+server will give a response: 
+```json
+{
+  "data": {
+    "profiles": [
+      {
+        "first_name": "Shina",
+        "last_name": "Mahiru",
+        "gender": "Female",
+        "last_updated": "2023-01-31T03:27:53.217Z",
+        "user": {
+          "email_address": "shinamahiru@gmail.com",
+          "created_at": "2023-01-31T03:27:53.217Z"
+        }
+      },
+      {
+        "first_name": "Tachibana",
+        "last_name": "Kanade",
+        "gender": "Female",
+        "last_updated": "2023-01-31T04:19:07.267Z",
+        "user": {
+          "email_address": "kanade@gmail.com",
+          "created_at": "2023-01-31T04:19:07.267Z"
+        }
+      },
+      {
+        "first_name": "Kagari",
+        "last_name": "Ayaka",
+        "gender": "Female",
+        "last_updated": "2023-01-31T04:19:52.695Z",
+        "user": {
+          "email_address": "kagari@gmail.com",
+          "created_at": "2023-01-31T04:19:52.695Z"
+        }
+      }
+    ]
+  }
+}
+```
+
+visit [https://graphql.org](https://graphql.org) for more documentations & [Click this](https://instagram.com/mframadann) to connect me in insragram. thank you:D
+
