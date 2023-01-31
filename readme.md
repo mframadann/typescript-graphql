@@ -7,6 +7,7 @@
 Simple GraphQL implementation, built using [GraphQL](https://graphql.org), [Prisma ORM](https://prisma.io), [Typescript](https://www.typescriptlang.org/) And [ExpressJS](https://expressjs.com/).
 
 ## Instalations
+with building: 
 ```shell
 $ npm install
 $ npm run build
@@ -33,10 +34,42 @@ mutation {
   ){
     ##your selected fileds. example:
     email_address
-    profile{
+    profile {
       first_name
       last_name
     }
+  }
+}
+```
+Getting all users data:
+```graphql
+query {
+  ## your queries name. example: 
+  users {
+    ## select the fields you want. for example
+    user_id
+    email_address
+  }
+}
+```
+and server will be give a responses: 
+```json
+{
+  "data": {
+    "users": [
+      {
+        "user_id": "3",
+        "email_address": "shinamashiru@gmail.com",
+      },
+      {
+        "user_id": "4",
+        "email_address": "kanade@gmail.com",
+      },
+      {
+        "user_id": "5",
+        "email_address": "kagari@gmail.com",
+      }
+    ]
   }
 }
 ```

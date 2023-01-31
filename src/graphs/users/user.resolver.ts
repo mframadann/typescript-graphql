@@ -14,8 +14,6 @@ export default {
   },
   findUserById: async (arg: UsersInputs): Promise<any> => {
     const user_id = Number(arg.userInputs.user_id);
-    console.log(arg);
-
     const user = await prisma.users.findUnique({
       where: {
         user_id,
