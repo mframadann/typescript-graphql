@@ -15,11 +15,15 @@ $ npm start
 ```
 or without building: 
 ```shell
-npm install
-npm run dev
+$ npm install
+$ npm run dev
+```
+push prisma schema to database:
+```shell
+$ npx prisma db push
 ```
 ## Usage
-creating a new user and profile data
+Visit [http://localhost:yourport/graphql](http://localhost:yourport/graphql) and creating a new user and profile data
 ```graphql
 mutation {
   createUsers(
@@ -32,7 +36,7 @@ mutation {
       password: "Password" 
     }
   ){
-    ##your selected fileds. example:
+    ##your selected fileds. for example:
     email_address
     profile {
       first_name
@@ -44,7 +48,7 @@ mutation {
 ### Getting all users data:
 ```graphql
 query {
-  ## your queries name. example: 
+  ## your queries name. for example: 
   users {
     ## select the fields you want. for example
     user_id
@@ -77,7 +81,9 @@ and server will be give a responses:
 ### Getting all users data with profile: 
 ```graphql
 query {
+  ## your queries name. for example: 
   users {
+    ## select the fields you want. for example
     user_id
     email_address
     profile {
