@@ -11,7 +11,21 @@ datasource db {
 }
 
 model Users {
-  user_id       Int    @unique @default(autoincrement())
-  email_address String @unique
+  user_id       Int       @unique @default(autoincrement())
+  profile       Profiles?
+  email_address String    @unique
   password      String
+  created_at    DateTime  @default(now())
+}
+
+model Profiles {
+  profile_id    Int      @unique @default(autoincrement())
+  user          Users    @relation(fields: [user_id], references: [user_id], onDelete: Cascade)
+  user_id       Int      @unique
+  first_name    String
+  last_name     String
+  gender        String
+  date_of_birth DateTime @db.Date
+  phone_number  String?  @unique
+  last_updated  DateTime @default(now())
 }
