@@ -17,23 +17,22 @@ or:
 npm install
 npm run dev
 ```
-##Usage
+## Usage
 creating a new user and profile data
 ```graphql
 mutation {
   createUsers(
     userInputs: {
-      firstName: "Jhon" //string
-      lastName: "Doe" //string
-      gender: "Male" //string
-      dateOfBirth: "2003-12-05" //date
-      emailAddress: "jhondoe@gmail.com" //string
-      password: "Password" //string
+      firstName: "Jhon" 
+      lastName: "Doe" 
+      gender: "Male" 
+      dateOfBirth: "2003-12-05" 
+      emailAddress: "jhondoe@gmail.com" 
+      password: "Password" 
     }
   ){
     profile{
-      first_name
-      last_name
+      //your selected fileds
     }
   }
 }
