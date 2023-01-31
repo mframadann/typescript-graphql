@@ -59,7 +59,7 @@ and server will be give a responses:
     "users": [
       {
         "user_id": "3",
-        "email_address": "shinamashiru@gmail.com",
+        "email_address": "shinamahiru@gmail.com",
       },
       {
         "user_id": "4",
@@ -68,6 +68,57 @@ and server will be give a responses:
       {
         "user_id": "5",
         "email_address": "kagari@gmail.com",
+      }
+    ]
+  }
+}
+```
+
+Getting all users data with profile: 
+```graphql
+query {
+  users {
+    user_id
+    email_address
+    profile {
+      first_name
+      last_name
+      gender
+    }
+  }
+}
+```
+server will give a response:
+```json
+{
+  "data": {
+    "users": [
+      {
+        "user_id": "3",
+        "email_address": "shinamahiru@gmail.com",
+        "profile": {
+          "first_name": "Shina",
+          "last_name": "Mahiru",
+          "gender": "Female"
+        }
+      },
+      {
+        "user_id": "4",
+        "email_address": "kanade@gmail.com",
+        "profile": {
+          "first_name": "Tachibana",
+          "last_name": "Kanade",
+          "gender": "Female"
+        }
+      },
+      {
+        "user_id": "5",
+        "email_address": "kagari@gmail.com",
+        "profile": {
+          "first_name": "Kagari",
+          "last_name": "Ayaka",
+          "gender": "Female"
+        }
       }
     ]
   }
