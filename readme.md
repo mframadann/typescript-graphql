@@ -7,19 +7,21 @@
 Simple GraphQL implementation, built using [GraphQL](https://graphql.org), [Prisma ORM](https://prisma.io), [Typescript](https://www.typescriptlang.org/) And [ExpressJS](https://expressjs.com/).
 
 ## Instalations
+installing the dependencies:
+```shell
+$ npm install
+```
 push prisma schema to database:
 ```shell
 $ npx prisma db push
 ```
 with building: 
 ```shell
-$ npm install
 $ npm run build
 $ npm start
 ```
 or without building: 
 ```shell
-$ npm install
 $ npm run dev
 ```
 ## Usage
